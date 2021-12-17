@@ -1,4 +1,6 @@
 #ARG BUILD_FROM="alpine:latest"
+FROM python:3
+
 ARG BUILD_FROM
 FROM $BUILD_FROM
 

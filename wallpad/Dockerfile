@@ -15,11 +15,11 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install requirements for add-on
 RUN \
-    apk add --no-cache \
+    sudo apk add --no-cache \
+        make \
         g++ \
         gcc \
         linux-headers \
-        make \
         nodejs \
         npm
 

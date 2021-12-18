@@ -36,7 +36,8 @@ RUN \
         git=2.34.1-r0 \
         nodejs=16.13.1-r0 \
         npm=8.1.3-r0 \
-        python3=3.9.7-r4 \
+        python3=3.9.7-r4
+        
 RUN \
     npm config set unsafe-perm true \
     \

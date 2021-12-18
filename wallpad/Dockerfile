@@ -21,7 +21,7 @@ RUN \
         linux-headers \
         make \
         nodejs \
-        npm \
+        npm
 
 #    \
 #    && apk add --no-cache jq npm make gcc g++ python3 linux-headers udev

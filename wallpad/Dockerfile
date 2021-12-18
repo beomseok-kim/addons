@@ -8,6 +8,10 @@ ENV LANG C.UTF-8
 COPY run.sh /
 COPY js /js
 
+WORKDIR /opt
+
+# Set shell
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install requirements for add-on
 RUN \

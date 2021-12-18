@@ -15,16 +15,12 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install requirements for add-on
 RUN \
-    apk add --no-cache --virtual .build-dependencies \
+    apk add --no-cache \
         g++=10.3.1_git20211027-r0 \
         gcc=10.3.1_git20211027-r0 \
         libc-dev=0.7.2-r3 \
         linux-headers=5.10.41-r0 \
         make=4.3-r0 \
-        py3-pip=20.3.4-r1 \
-        python3-dev=3.9.7-r4 \
-    \
-    && apk add --no-cache \
         nodejs=16.13.1-r0 \
         npm=8.1.3-r0 \
         python3=3.9.7-r4

@@ -1,4 +1,4 @@
-ARG BUILD_FROM="alpine:latest"
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/armv7:11.0.0
 # ARG BUILD_FROM
 FROM $BUILD_FROM
 

@@ -41,12 +41,9 @@ RUN \
 RUN \
     npm config set unsafe-perm true \
     \
-    && npm install \
-        --no-audit \
-        --no-optional \
-        --no-update-notifier \
-        --only=production \
-        --unsafe-perm \
+    && npm install -f \ 
+    && npm install mqtt \
+    && npm install serialport --unsafe-perm --build-from-source \
     \
     && npm cache clear --force
 

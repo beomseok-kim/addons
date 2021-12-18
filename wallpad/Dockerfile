@@ -50,7 +50,7 @@ RUN \
         --only=production \
         --unsafe-perm \
     \
-    && npm cache clear --force \
+    && npm cache clear --force
 
 WORKDIR /share
 RUN chmod a+x /run.sh

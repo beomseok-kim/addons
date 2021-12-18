@@ -19,8 +19,6 @@ RUN \
         make=4.3-r0 \
         py3-pip=20.3.4-r1 \
         python3-dev=3.9.7-r4 \
-        udev \
-        jq \
     \
     && apk add --no-cache \
         nodejs=16.13.1-r0 \

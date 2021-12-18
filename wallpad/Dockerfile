@@ -7,12 +7,18 @@ ENV LANG C.UTF-8
 # Copy data for add-on
 COPY run.sh /
 COPY js /js
+# Copy Node-RED package.json
+COPY package.json requirements.txt /opt/
 
-WORKDIR /share
+# Set workdir
+WORKDIR /opt
+
+# Set shell
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install requirements for add-on
-RUN apk add --no-cache nodejs
-RUN apk add --no-cache jq npm make gcc g++ python3 linux-headers udev
+#RUN apk add --no-cache nodejs
+#RUN apk add --no-cache jq npm make gcc g++ python3 linux-headers udev
 # RUN npm init -f
 # RUN npm install mqtt
 #RUN npm install serialport --build-from-source=serialport 
@@ -46,7 +52,7 @@ RUN \
     \
     && npm cache clear --force \
 
-
+WORKDIR /share
 RUN chmod a+x /run.sh
 
 CMD [ "/run.sh" ]

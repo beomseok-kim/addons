@@ -8,7 +8,7 @@ ENV LANG C.UTF-8
 COPY run.sh /
 COPY js /js
 # Copy Node-RED package.json
-COPY package.json requirements.txt /opt/
+COPY package.json /opt/
 
 # Set workdir
 WORKDIR /opt

@@ -8,8 +8,14 @@ ENV LANG C.UTF-8
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install requirements for add-on
+
+
+출처: https://neet.tistory.com/entry/Alpine-linux-ERROR-unsatisfiable-constraints-docker-missing-required-by-worlddocker-오류-해결방법 [자택경비대]
+
 RUN \
-    apk add --no-cache jq npm make gcc g++ python3 linux-headers udev
+    echo "http://dl-cdn.alpinelinux.org/alpine/latest-stable/community" >> /etc/apk/repositories \
+    && apk update \
+    && apk add --no-cache jq npm make gcc g++ python3 linux-headers udev
 #    \
 #    && npm init -f
 #    \

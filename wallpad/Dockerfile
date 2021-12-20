@@ -11,13 +11,13 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apk add --no-cache jq npm make gcc g++ python3 linux-headers udev
 
-WORKDIR /
+WORKDIR /usr/app
 RUN \
-    npm init -f \
+    npm init -g \
     \
-    && npm install mqtt \
+    && npm install -g mqtt \
     \
-    && npm install serialport --build-from-source
+    && npm install -g serialport --build-from-source
 
 # Copy data for add-on
 COPY run.sh /

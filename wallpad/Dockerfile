@@ -4,6 +4,8 @@ FROM ${BUILD_FROM}
 
 ENV LANG C.UTF-8
 
+WORKDIR /app
+
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 

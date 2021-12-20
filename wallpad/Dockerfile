@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:11.0.0
+ARG BUILD_FROM=alpine:3.9
 # ARG BUILD_FROM=python:3
 FROM ${BUILD_FROM}
 

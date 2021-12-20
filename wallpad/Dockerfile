@@ -10,8 +10,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Install requirements for add-on
 
 RUN \
-    echo "http://dl-cdn.alpinelinux.org/alpine/latest-stable/community" >> /etc/apk/repositories \
-    && apk update \
+    apk update \
     && apk add --no-cache jq npm make gcc g++ python3 linux-headers udev
 #    \
 #    && npm init -f

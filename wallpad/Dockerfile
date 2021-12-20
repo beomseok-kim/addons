@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install requirements for add-on
 RUN \
-    apt add --no-cache \
+    apk add --no-cache \
         make \
         gcc \
         g++ \

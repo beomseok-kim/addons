@@ -1,14 +1,8 @@
 ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:11.0.0
 # ARG BUILD_FROM=python:3
-FROM $BUILD_FROM
+FROM ${BUILD_FROM}
 
 ENV LANG C.UTF-8
-
-# Copy data for add-on
-COPY run.sh /
-COPY js /js
-
-WORKDIR /opt
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -17,8 +11,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
     apt add --no-cache \
         make \
-        g++ \
         gcc \
+        g++ \
         linux-headers \
         udev \
         npm
@@ -31,6 +25,10 @@ RUN \
 #    && npm install mqtt \
 #    \
 #    && npm install serialport --build-from-source
+
+# Copy data for add-on
+COPY run.sh /
+COPY js /js
 
 WORKDIR /share
 RUN chmod a+x /run.sh

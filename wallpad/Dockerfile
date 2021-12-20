@@ -1,6 +1,6 @@
-ARG BUILD_FROM=alpine:3.9
+#ARG BUILD_FROM=alpine:3.9
 # ARG BUILD_FROM=python:3
-FROM ${BUILD_FROM}
+# FROM ${BUILD_FROM}
 
 ENV LANG C.UTF-8
 
@@ -10,8 +10,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Install requirements for add-on
 
 RUN \
-    apk update \
-    && apk add --no-cache jq npm make gcc g++ python3 linux-headers udev
+    apk add --no-cache jq npm make gcc g++ python3 linux-headers udev
 #    \
 #    && npm init -f
 #    \
